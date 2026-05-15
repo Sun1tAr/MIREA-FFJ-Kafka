@@ -1,0 +1,27 @@
+
+server:
+  port : 8085
+spring:
+  application:
+    name: MIREA-FFJ-Kafka
+  kafka:
+    bootstrap-servers: localhost:29092,localhost:29093,localhost:29094
+    consumer:
+      group-id: fromClient
+      auto-offset-reset: latest
+
+
+    topics:
+      from-client:
+        name: "from-client"
+        partitions: 3
+        replicas: 3
+        retention-ms: 86400000
+        retention-bytes: 524288000
+      to-client:
+        name: to-client
+        partitions: 3
+        replicas: 3
+        retention-ms: 86400000
+        retention-bytes: 524288000
+
