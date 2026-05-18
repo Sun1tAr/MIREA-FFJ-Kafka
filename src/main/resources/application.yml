@@ -10,7 +10,6 @@ spring:
       group-id: fromClient
       auto-offset-reset: latest
 
-
     topics:
       from-client:
         name: "from-client"
